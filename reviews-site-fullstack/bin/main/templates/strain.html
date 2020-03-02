@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>A Type</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+		<h1>Most Popular Strains</h1>
+		
+		<div th:each = "strain: ${strains}">
+		<p th:text =  "${strain.name}"></p>
+		<p th:text =  "${strain.description}"></p>
+        <a href="http://localhost:8080/strains">Back to types</a>
+        </div>
+        <div>
+        <a href="http://localhost:8080/">Back to home</a>
+        </div>
+<footer>&copy; 2020 The Medical Marijuana Advisors of Ohio</footer>       
+</body>
+</html>

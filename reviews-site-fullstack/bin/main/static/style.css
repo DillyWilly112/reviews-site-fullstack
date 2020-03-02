@@ -1,0 +1,102 @@
+* {
+	font-family: sans-serif;
+	line-height: 1.618em;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #FFFFF0;
+	font-size: 14px;
+	margin-top: 3em;
+}
+
+h1,
+h2,
+h3 {
+	color: #2F4F4F;
+}
+
+header,
+main,
+footer {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+header {
+	padding: 2em 0;
+}
+
+header h1 {
+	font-size: 3em;
+}
+
+header span {
+	font-size: 1.5em;
+	color: #696969;
+}
+
+
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+	background: #2F4F4F;
+}
+
+nav a {
+	padding: .5em 2em;
+	text-decoration: none;
+	color: #FFFFF0;
+}
+
+nav a:hover {
+	background: #808080;
+}
+
+section {
+	margin: 1em 0;
+	padding-top: 3em;
+	min-height: 20em;
+}
+
+section > p {
+	margin: 1em 0;
+}
+
+section ul {
+	padding-left: 1.5em;
+}
+
+#Projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-column-gap: 1em;
+}
+
+#Projects article {
+    background: #CD5C5C;
+    padding: 1em;
+}
+
+#body article img {
+	width: 100px;
+	border: 102px solid #CD5C5C;
+}
+
+footer {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	background: #2F4F4F; 
+	color: #FFFFF0;
+	padding: 1em 0;
+	text-align: center;
+}
