@@ -1,117 +1,153 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<title>Medical Marijuana</title>
 
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
 
-    <header>
-<h1>Medical Marijuana Facts</h1>
-<span>Getting to Know if Medical Marijuana is Right for you</span>
-<article>
-<img src="./maryJane.jxr">
-</article>
-</header>
-        <nav>
-    		<a href="#typesAndStrains">Types and Strains</a>
-    		<a href="#chemicalComposition">Chemical Composition</a>
-            <a href="#sideEffects">Side Effects</a>
-            <a href="#qualifyingConditions">Qualifying Conditions</a>
-    		<a href="#contactUs">Contact Us</a>
-    	</nav>
+	<header>
 
-    	<main>
-    	    
-    	    <section id="typesAndStrains">
-    	    <h2>Types and Strains</h2>
-    	    <div th:each = "type: ${types}">
-		<p th:text =  "${type.name}"></p>
-		<p th:text =  "${type.description}"></p>
-        <a href="http://localhost:8080/show-types">Types</a>
-        </div>
-        
-        <div th:each="strain: ${strains}">
-		    <h2 th:text="${strain.name}"></h2>
-             <a href="http://localhost:8080/strains">Strains</a>
-        </div>
-    	    
-    	    </section>
+		<h1>Medical Marijuana Facts</h1>
+		<span>Getting to Know if Medical Marijuana is Right for you</span>
+		<article>
+			<img src="./maryJane1.jxr.">
+		</article>
+	</header>
+	<nav>
+		<a href="#typesAndStrains">Types and Strains</a>
+		<a href="#chemicalComposition">Chemical Composition</a>
+		<a href="#sideEffects">Side Effects</a>
+		<a href="#qualifyingConditions">Qualifying Conditions</a>
+		<a href="#contactUs">Contact Us</a>
+	</nav>
 
-    		<section id="chemicalComposition">
-    			<h2>Chemical Composition</h2>
-                <p>Cannabis is a natural product, the main psychoactive constituent of which is tetrahydrocannabinol (Δ9-THC). 
-                The cannabis plant (Cannabis sativa L.) is broadly distributed and grows in temperate and tropical areas. 
-                Together with tobacco, alcohol and caffeine, it is one of the most widely consumed drugs throughout the world, and has been used as a drug and a source of fibre since historical times. 
-                Herbal cannabis consists of the dried flowering tops and leaves. 
-                Cannabis resin is a compressed solid made from the resinous parts of the plant, and cannabis (hash) oil is a solvent extract of cannabis. 
-                Cannabis is almost always smoked, often mixed with tobacco. Almost all consumption of herbal cannabis and resin is of illicit material. 
-                Some therapeutic benefit as an analgesic has been claimed for cannabis, and dronabinol is a licensed medicine in some countries for the treatment of nausea in cancer chemotherapy. Cannabis products and Δ9-THC are under international control.
-                </p>
-    		</section>
-    		<section id="sideEffects">
-    			<h2>Most Common Side Effects</h2>
-    			<article>
-                <p>Altered State of Mind</p>
-                <p>Change in Mood</p>
-                <p>Impaired Body Movement</p>
-                <p>Difficulty Problem-Solving</p>
-                <p>Weight Gain</p>
-                <p>Lack of Motivation</p>
-                <p>Increase of Appetite</p>
-                </article>
+	<main>
+		<section id="typesAndStrains">
+			<h2>Types and Strains</h2>
+			
+				<div th:each="type: ${types}">
+					<p th:text="${type.name}"></p>
+					<p th:text="${type.description}"></p>
+					<a href="http://localhost:8080/show-types">
+						<button>Types</button>
+					</a>
+				</div>
 
-    		</section>
-    		<section id="qualifyingConditions">
-    			<h2>Qualifying Conditions</h2>
-                <p>Below is a List of the most common qualifying conditions in Ohio. This is not all of the qualifying conditions! As of 2020 there are 21 qualifying conditions in the state of Ohio. 
+				<div th:each="strain: ${strains}">
+					<h2 th:text="${strain.name}"></h2>
+					<a href="http://localhost:8080/strains">
+						<button>Strains</button>
+					</a>
+				</div>
+			</section>
+		
 
- </p>
+			<section id="chemicalComposition">
+				<h2>Chemical Composition</h2>
+				<p>Cannabis is a natural product, the main psychoactive constituent of which is tetrahydrocannabinol
+					(Δ9-THC).
+					The cannabis plant (Cannabis sativa L.) is broadly distributed and grows in temperate and tropical
+					areas.
+					Together with tobacco, alcohol and caffeine, it is one of the most widely consumed drugs throughout
+					the
+					world, and has been used as a drug and a source of fibre since historical times.
+					Herbal cannabis consists of the dried flowering tops and leaves.
+					Cannabis resin is a compressed solid made from the resinous parts of the plant, and cannabis (hash)
+					oil
+					is a solvent extract of cannabis.
+					Cannabis is almost always smoked, often mixed with tobacco. Almost all consumption of herbal
+					cannabis
+					and resin is of illicit material.
+					Some therapeutic benefit as an analgesic has been claimed for cannabis, and dronabinol is a licensed
+					medicine in some countries for the treatment of nausea in cancer chemotherapy. Cannabis products and
+					Δ9-THC are under international control.
+				</p>
+			</section>
 
-                <div id="listofQualifyingConditionsinOhio">
-                	<article>
-                		<h3>Post Traumatic Stress Disorder (PTSD)</h3>
-                		<p>Symptoms:</p>
-                		<p>FlashBacks, Isolation, Behavioral Changes, Mood Swings</p>
-                <div id="ptsdLink"> 
-                		<a th:href="https://www.webmd.com/mental-health/what-are-symptoms-ptsd">PTSD Link:</a>
-                </div>
-                	</article>
+			<section id="sideEffects">
+				<h2>Most Common Side Effects</h2>
+				<article>
+					<p>Altered State of Mind</p>
+					<p>Change in Mood</p>
+					<p>Impaired Body Movement</p>
+					<p>Difficulty Problem-Solving</p>
+					<p>Weight Gain</p>
+					<p>Lack of Motivation</p>
+					<p>Increase of Appetite</p>
+				</article>
+			</section>
 
-                    <article>
-                    	<h3>Fibromyalgia</h3>
-                    	<p>Symptoms:</p>
-                    	<p>Pain, Fatigue, Difficulty Sleeping, Anxiety, Depression, Headaches, Numbness</p>
-                    	<p>Link: https://www.webmd.com/fibromyalgia/guide/fibromyalgia-symptoms#1
-                        </p>
-                    </article>
+			<section id="qualifyingConditions">
+				<h2>Qualifying Conditions</h2>
+				<p>Below is a List of the most common qualifying conditions in Ohio. This is not all of the qualifying
+					conditions! As of 2020 there are 21 qualifying conditions in the state of Ohio.
+				</p>
 
-                    <article>
-                    	<h3>Parkinson's disease (PD)</h3>
-                    	<p>Symptoms:</p>
-                    	<p>Tremors, Loss of Smell, Trouble Sleeping, Difficulty Moving, Constipation</p>
-                    	<p>Link: https://www.michaeljfox.org/symptoms?smcid=ag-a1b1R0000086fLZ</p>
-                    </article>
-                </div>
+				<div id="listofQualifyingConditionsinOhio">
+					<article>
+						<h3>Post Traumatic Stress Disorder (PTSD)</h3>
+						<h4>Symptoms:</h4>
+						<p>FlashBacks, Isolation, Behavioral Changes, Mood Swings
+						</p>
+						<p>
+							<a href="https://www.webmd.com/mental-health/what-are-symptoms-ptsd" target="_blank">
+								<button>For
+								more
+								info on PTSD</button>
+							</a>
+						</p>
+					</article>
 
-    		</section>
+					<article>
+						<h3>Fibromyalgia</h3>
+						<h4>Symptoms:</h4>
+						<p>Pain, Fatigue, Difficulty Sleeping, Anxiety, Depression, Headaches, Numbness
+						</p>
 
-    		<section id="contactUs">
+						<p>
+							<a href="https://www.webmd.com/fibromyalgia/guide/fibromyalgia-symptoms#1"
+								target="_blank"><button>For
+									more info on Fibromyalgia</button>
+							</a>
+						</p>
+					</article>
 
-    			<h2>Contact Us</h2>
-                <p>Feel free to contact us about any concerns or questions that weren't covered. We can be easily reached at any of the points of contact below.</p>
-                <p>
-                	<ul>
-                		<li>Email: fredvaca112@icloud.com</li>
-                		<li>Phone: 330-243-5690</li>
-                	</ul>
+					<article>
+						<h3>Parkinson's disease (PD)</h3>
+						<h4>Symptoms:</h4>
+						<p>Tremors, Loss of Smell, Trouble Sleeping, Difficulty Moving, Constipation</p>
+						<p>
+							<a href="https://www.michaeljfox.org/symptoms?smcid=ag-a1b1R0000086fLZ" target="_blank"><button>For
+								more
+								info on Parkinson's disease</button>
+							</a>
+						</p>
+					</article>
+				</div>
+			</section>
 
-                </p>
-    		</section>
-    	</main>
-    	<footer>
-    		&copy; 2020 The Medical Marijuana Advisors of Ohio
-    	</footer>
+			<section id="contactUs">
+
+				<h2>Contact Us</h2>
+				<p>Feel free to contact us about any concerns or questions that weren't covered. We can be easily
+					reached at
+					any of the points of contact below.</p>
+				<p>
+					<ul>
+						<li>Email: fredvaca112@icloud.com</li>
+						<li>Phone: 330-243-5690</li>
+					</ul>
+
+				</p>
+			</section>
+	</main>
+	<footer>
+		&copy; 2020 The Medical Marijuana Advisors of Ohio
+	</footer>
 </body>
+
 </html>

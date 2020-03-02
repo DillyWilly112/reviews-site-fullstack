@@ -38,14 +38,14 @@ public class TypePopulator implements CommandLineRunner {
 		Strain aK47 = new Strain("AK-47");
 		aK47 = strainRepo.save(aK47);
 		
-		Type indica = new Type("Indica Dominant", "Learn the most popular strains of an indica dominant strain.", northernLights, sundayDriver, garlicCookies, ogKush, whiteWidow, aK47);
+		Type indica = new Type("Indica Dominant", "Indica-dominant strains are known for relaxation & reduce stress.", northernLights, sundayDriver, garlicCookies, ogKush, whiteWidow, aK47);
 		indica = typeRepo.save(indica);
-		Type sativa = new Type("Sativa Dominant", "Learn the most popular strains of a sativa dominant strain.", pineappleExpress, purpleHaze, sourDiesel, ogKush, whiteWidow, aK47);
+		Type sativa = new Type("Sativa Dominant", "Sativa-dominant strains are known for creative thinking & uplifting.", pineappleExpress, purpleHaze, sourDiesel, ogKush, whiteWidow, aK47);
 		sativa = typeRepo.save(sativa);
-		Type hybrid = new Type("Hybrids", "Learn the most popular strains of a true hybrid.", ogKush, whiteWidow, aK47);
+		Type hybrid = new Type("Hybrids", "Hybrid strains create a balance of mind and body.", ogKush, whiteWidow, aK47);
 		hybrid = typeRepo.save(hybrid);
 		
-		compositionRepo.save(new Composition("Creat Balance of Mind and Body", hybrid));
+		compositionRepo.save(new Composition("Create Balance of Mind and Body", hybrid));
 		compositionRepo.save(new Composition("Creative Thinking, Uplifting", sativa));
 		compositionRepo.save(new Composition("Relaxation, Reduce Stress", indica));
 	}

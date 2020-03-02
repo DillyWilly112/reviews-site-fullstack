@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<title>Types</title>
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
-		<h1>A List of All Types</h1>
-	
+	<h1>A List of All Types</h1>
+
 	<div th:each="type: ${types}">
-	<li><a th:href="@{/type(id=${type.id})}" th:text="${type.name}"></a>
-	</li>
+		<li><a th:href="@{/type(id=${type.id})}" th:text="${type.name}">
+			</a>
+		</li>
 	</div>
 	<div>
-        <a href="http://localhost:8080/">Back to home</a>
-        </div>
-	
+		<a href="http://localhost:8080/">
+			<button>Back to home</button>
+		</a>
+	</div>
+
 </body>
+
 </html>
